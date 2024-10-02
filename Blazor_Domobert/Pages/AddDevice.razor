@@ -1,0 +1,20 @@
+﻿@page "/addDevice"
+<h3>AddDevice</h3>
+
+
+<EditForm class="form" Model="FormAddDevice" OnValidSubmit="OnSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-control">
+        Nom : <InputText @bind-Value="FormAddDevice.Name" />
+    </div>
+    <div class="form-control">
+        Type : <InputText @bind-Value="FormAddDevice.Type" />
+    </div>
+    <div class="form-control">
+        Localisation : <InputText @bind-Value="FormAddDevice.Location" />
+    </div>
+
+    <button class="btn btn-outline-success">Valider</button>
+
+    <ValidationSummary />
+</EditForm>

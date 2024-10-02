@@ -1,0 +1,6 @@
+@API_Domobert_HostAddress = http://localhost:5216
+
+GET {{API_Domobert_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
