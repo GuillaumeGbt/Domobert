@@ -1,6 +1,8 @@
 using Common;
 using Dal = DAL.Models;
 using Bll = BLL.Models;
+using sDal = DAL.Services;
+using sBll = BLL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +19,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-//TODO CORS MODIFICATION
+// MQTT service
+builder.Services.AddControllers();
+builder.Services.AddSingleton(
+    builder.Configuration.GetSection("Mqtt").Get<sDal.MqttService.Configuration>()
+    ?? throw new Exception("Mqtt Config is missing")
+);
+builder.Services.AddTransient<sBll.MqttService>();
+
+
+// TODO CORS MODIFICATION
 builder.Services.AddCors(opt => opt.AddPolicy(name: "myPolicy", blder => {
     blder.AllowAnyOrigin()
         .AllowAnyMethod()

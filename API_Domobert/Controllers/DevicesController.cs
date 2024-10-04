@@ -22,28 +22,59 @@ namespace API_Domobert.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_repository.GetAll());
+            try
+            {
+                return Ok(_repository.GetAll());
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
         }
 
         // GET api/<DevicesController>/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok(_repository.GetById(id));
+            try
+            {
+                return Ok(_repository.GetById(id));
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
         }
 
         // POST api/<DevicesController>
         [HttpPost]
         public IActionResult Post([FromBody] AddDevice value)
         {
-            return Ok(_repository.Add(value.toBll()));
+            try
+            {
+                return Ok(_repository.Add(value.toBll()));
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
         }
 
         // PUT api/<DevicesController>/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] AddDevice value)
         {
-            return Ok(_repository.Update(id,value.toBll())) ;
+            try
+            {
+                return Ok(_repository.Update(id, value.toBll()));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
 
         }
 
@@ -51,7 +82,14 @@ namespace API_Domobert.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            return Ok(_repository.Delete(id));
+            try
+            {
+                return Ok(_repository.Delete(id));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

@@ -1,20 +1,28 @@
 ﻿@page "/addDevice"
 <h3>AddDevice</h3>
 
+<RadzenNotification />
 
-<EditForm class="form" Model="FormAddDevice" OnValidSubmit="OnSubmit">
+<EditForm Model="FormAddDevice" OnValidSubmit="OnSubmit">
     <DataAnnotationsValidator />
-    <div class="form-control">
-        Nom : <InputText @bind-Value="FormAddDevice.Name" />
-    </div>
-    <div class="form-control">
-        Type : <InputText @bind-Value="FormAddDevice.Type" />
-    </div>
-    <div class="form-control">
-        Localisation : <InputText @bind-Value="FormAddDevice.Location" />
+
+    <div class="mb-3">
+        <RadzenLabel Text="Nom" Component="Name" />
+        <RadzenTextBox @bind-Value="FormAddDevice.Name" Style="width: 100%;" Placeholder="Enter device name" />
     </div>
 
-    <button class="btn btn-outline-success">Valider</button>
+    <div class="mb-3">
+        <RadzenLabel Text="Type" Component="Type" />
+        <RadzenTextBox @bind-Value="FormAddDevice.Type" Style="width: 100%;" Placeholder="Enter device type" />
+    </div>
+
+    <div class="mb-3">
+        <RadzenLabel Text="Localisation" Component="Location" />
+        <RadzenTextBox @bind-Value="FormAddDevice.Location" Style="width: 100%;" Placeholder="Enter device location" />
+    </div>
+
+    <RadzenButton Text="Valider" Icon="save" ButtonStyle="ButtonStyle.Success"
+                  Click="OnSubmit" Style="margin-top: 20px;" />
 
     <ValidationSummary />
 </EditForm>

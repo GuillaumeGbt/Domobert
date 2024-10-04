@@ -1,0 +1,302 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{958092C3-C647-4335-8A08-D3D2817E2062}|BLL\\BLL.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\bll\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{958092C3-C647-4335-8A08-D3D2817E2062}|BLL\\BLL.csproj|solutionrelative:bll\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC78EC7E-FFDC-46CE-AC9B-0864884CEB32}|DAL\\DAL.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\dal\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC78EC7E-FFDC-46CE-AC9B-0864884CEB32}|DAL\\DAL.csproj|solutionrelative:dal\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8DDA88C-BF79-46AE-A397-F9196FF30C96}|Common\\Common.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\common\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8DDA88C-BF79-46AE-A397-F9196FF30C96}|Common\\Common.csproj|solutionrelative:common\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6F1992-8A3F-4618-957C-B6BF86BE0C33}|API_Domobert\\API_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\api_domobert\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6F1992-8A3F-4618-957C-B6BF86BE0C33}|API_Domobert\\API_Domobert.csproj|solutionrelative:api_domobert\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6F1992-8A3F-4618-957C-B6BF86BE0C33}|API_Domobert\\API_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\api_domobert\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D6F1992-8A3F-4618-957C-B6BF86BE0C33}|API_Domobert\\API_Domobert.csproj|solutionrelative:api_domobert\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC78EC7E-FFDC-46CE-AC9B-0864884CEB32}|DAL\\DAL.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AC78EC7E-FFDC-46CE-AC9B-0864884CEB32}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\light.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\light.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\heater.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\heater.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\temperaturesensor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\temperaturesensor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\temperaturesensor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\temperaturesensor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\camera.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\camera.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\camera.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\camera.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|c:\\users\\guillaume\\source\\repos\\domobert\\blazor_domobert\\pages\\widget\\heater.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2F4EFA-8B3A-4B61-85EF-84B04578B83F}|Blazor_Domobert\\Blazor_Domobert.csproj|solutionrelative:blazor_domobert\\pages\\widget\\heater.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Common\\IDeviceRepository.cs",
+              "RelativeDocumentMoniker": "Common\\IDeviceRepository.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Common\\IDeviceRepository.cs",
+              "RelativeToolTip": "Common\\IDeviceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T17:16:09.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\API_Domobert\\appsettings.json",
+              "RelativeDocumentMoniker": "API_Domobert\\appsettings.json",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\API_Domobert\\appsettings.json",
+              "RelativeToolTip": "API_Domobert\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-04T17:08:59.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MqttService.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\BLL\\Services\\MqttService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\MqttService.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\BLL\\Services\\MqttService.cs",
+              "RelativeToolTip": "BLL\\Services\\MqttService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:51:19.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\API_Domobert\\Program.cs",
+              "RelativeDocumentMoniker": "API_Domobert\\Program.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\API_Domobert\\Program.cs",
+              "RelativeToolTip": "API_Domobert\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:47:24.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MqttService.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\DAL\\Services\\MqttService.cs",
+              "RelativeDocumentMoniker": "DAL\\Services\\MqttService.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\DAL\\Services\\MqttService.cs",
+              "RelativeToolTip": "DAL\\Services\\MqttService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:43:44.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\DAL\\DAL.csproj",
+              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\DAL\\DAL.csproj",
+              "RelativeToolTip": "DAL\\DAL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-04T15:26:30.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Light.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Light.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\Light.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Light.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\Light.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T15:21:50.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T10:00:34.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T09:59:16.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Home.razor.css",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Home.razor.css",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Home.razor.css",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Home.razor.css",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Home.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-04T09:44:18.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Home.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Home.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T09:42:06.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Camera.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Camera.razor.cs",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\Camera.razor.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Camera.razor.cs",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\Camera.razor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T09:41:06.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Camera.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Camera.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\Camera.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Camera.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\Camera.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T09:40:55.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TemperatureSensor.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor.cs",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor.cs",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T09:40:43.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TemperatureSensor.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\TemperatureSensor.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T09:39:57.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Heater.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Heater.razor.cs",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\Heater.razor.cs",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Heater.razor.cs",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\Heater.razor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T09:38:42.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Heater.razor",
+              "DocumentMoniker": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Heater.razor",
+              "RelativeDocumentMoniker": "Blazor_Domobert\\Pages\\Widget\\Heater.razor",
+              "ToolTip": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\Pages\\Widget\\Heater.razor",
+              "RelativeToolTip": "Blazor_Domobert\\Pages\\Widget\\Heater.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-04T09:38:25.397Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

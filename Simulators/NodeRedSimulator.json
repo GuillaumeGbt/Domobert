@@ -1,0 +1,574 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "55642a722cdfa786",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Lampes",
+        "style": {
+            "fill": "#ffff00",
+            "label": true,
+            "label-position": "n",
+            "color": "#001f60",
+            "fill-opacity": "0.45"
+        },
+        "nodes": [
+            "e1c9e4d9.c6c2d8",
+            "3c0cd17d.aa1d64",
+            "8d5c74d2.b96cf8",
+            "c59ef7a8.9d3e88",
+            "d1e98d49.54e4b8"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 682,
+        "h": 202
+    },
+    {
+        "id": "9127b07356b21770",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperature Sensor",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ff0000",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill-opacity": "0.43"
+        },
+        "nodes": [
+            "b8dfb80b.20a1b8",
+            "a68f7aeb.e6aef8",
+            "c4b9d9e3.9dbd58"
+        ],
+        "x": 54,
+        "y": 299,
+        "w": 742,
+        "h": 82
+    },
+    {
+        "id": "939b22258f9a48da",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperature Control",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#92d04f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill-opacity": "0.46"
+        },
+        "nodes": [
+            "cb6f72a8.b1fef",
+            "f8f5c219.2b785",
+            "b9aecef2.264b3",
+            "5f3b9cf3.3784f4",
+            "8941f0b4.c07ff",
+            "aa9c250cb850b677"
+        ],
+        "x": 784,
+        "y": 39,
+        "w": 1022,
+        "h": 182
+    },
+    {
+        "id": "b94379711a0b6c96",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Solar Panel",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill": "#3f93cf",
+            "fill-opacity": "0.42"
+        },
+        "nodes": [
+            "2f8f8c03.1e4ff4",
+            "a5b6c59b.22f6f",
+            "b4d5a5c8.efabf8"
+        ],
+        "x": 874,
+        "y": 299,
+        "w": 782,
+        "h": 82
+    },
+    {
+        "id": "6cce44b590c4ee77",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Camera",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#777777",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "f3e34f82.d1c8a",
+            "f4d5efb7.123c6",
+            "7a8a9f4a.a5c9a"
+        ],
+        "x": 54,
+        "y": 419,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "e1c9e4d9.c6c2d8",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "g": "55642a722cdfa786",
+        "name": "Commande Lampe",
+        "topic": "CMD_Lampe_Salon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e12ef56e.5c2b88",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "3c0cd17d.aa1d64"
+            ]
+        ]
+    },
+    {
+        "id": "3c0cd17d.aa1d64",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "55642a722cdfa786",
+        "name": "Contrôler Lampe",
+        "func": "msg.payload = (msg.payload === true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "8d5c74d2.b96cf8"
+            ]
+        ]
+    },
+    {
+        "id": "8d5c74d2.b96cf8",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "55642a722cdfa786",
+        "name": "État Lampe",
+        "topic": "Lampe_Salon",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e12ef56e.5c2b88",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c59ef7a8.9d3e88",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "55642a722cdfa786",
+        "name": "Allumer la lampe",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "8d5c74d2.b96cf8"
+            ]
+        ]
+    },
+    {
+        "id": "d1e98d49.54e4b8",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "55642a722cdfa786",
+        "name": "Éteindre la lampe",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "8d5c74d2.b96cf8"
+            ]
+        ]
+    },
+    {
+        "id": "b8dfb80b.20a1b8",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "9127b07356b21770",
+        "name": "Générer Temp/humi",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "a68f7aeb.e6aef8"
+            ]
+        ]
+    },
+    {
+        "id": "a68f7aeb.e6aef8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "9127b07356b21770",
+        "name": "Capteur de temp/humi",
+        "func": "// Vérifier la température initiale\nif (context.get('currentTemp') === undefined) {\n    context.set('currentTemp', 20); // Température initiale\n}\n\n// Générer une température réaliste entre 18 et 25 degrés Celsius\nlet minTemp = 18;\nlet maxTemp = 25;\nlet currentTemp = context.get('currentTemp');\n\n// Fluctuation lente : ajouter un petit changement\nlet fluctuation = (Math.random() - 0.5) * 0.5; // Valeur entre -0.25 et +0.25\ncurrentTemp += fluctuation;\n\n// Limiter les valeurs dans les bornes définies\ncurrentTemp = Math.max(minTemp, Math.min(maxTemp, currentTemp));\ncontext.set('currentTemp', currentTemp); // Stocker la température actuelle\n\n// Générer une humidité réaliste entre 30 et 70%\nlet minHumidity = 30;\nlet maxHumidity = 70;\nlet currentHumidity = context.get('currentHumidity') || 50; // Humidité initiale\n\n// Fluctuation lente pour l'humidité\nlet humidityFluctuation = (Math.random() - 0.5) * 1; // Valeur entre -0.5 et +0.5\ncurrentHumidity += humidityFluctuation;\ncurrentHumidity = Math.max(minHumidity, Math.min(maxHumidity, currentHumidity)); // Limiter l'humidité\ncontext.set('currentHumidity', currentHumidity); // Stocker l'humidité actuelle\n\n// Créer l'objet JSON avec température et humidité\nmsg.payload = {\n    temperature: parseFloat(currentTemp.toFixed(2)), // Limiter à 2 décimales\n    humidity: parseFloat(currentHumidity.toFixed(2))  // Limiter à 2 décimales\n};\n\n// Afficher les valeurs dans le debug\nnode.warn(`Température générée : ${msg.payload.temperature}, Humidité générée : ${msg.payload.humidity}`);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "c4b9d9e3.9dbd58"
+            ]
+        ]
+    },
+    {
+        "id": "c4b9d9e3.9dbd58",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "9127b07356b21770",
+        "name": "État Temp/humi",
+        "topic": "Temperature_Maison",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e12ef56e.5c2b88",
+        "x": 690,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cb6f72a8.b1fef",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Température cible",
+        "topic": "CMD_Heater_Home",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "e12ef56e.5c2b88",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 930,
+        "y": 80,
+        "wires": [
+            [
+                "f8f5c219.2b785",
+                "aa9c250cb850b677"
+            ]
+        ]
+    },
+    {
+        "id": "f8f5c219.2b785",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Stocker la température cible",
+        "func": "var targetTemp = msg.payload;\n\n// Vérifie que la température est bien un nombre valide\nif (!isNaN(targetTemp)) {\n    flow.set('targetTemp', targetTemp);  // Utilisation du contexte de flux\n    node.warn(`Température cible reçue et stockée : ${targetTemp}`);\n} else {\n    node.warn('Température reçue non valide');\n}\n\nreturn null;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9aecef2.264b3",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Toutes les 2 minutes",
+        "props": [],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 930,
+        "y": 180,
+        "wires": [
+            [
+                "aa9c250cb850b677"
+            ]
+        ]
+    },
+    {
+        "id": "5f3b9cf3.3784f4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Lire et envoyer la température cible",
+        "func": "var targetTemp = flow.get('targetTemp') || \"0\";  // On récupère la température stockée\nmsg.payload = targetTemp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 180,
+        "wires": [
+            [
+                "8941f0b4.c07ff"
+            ]
+        ]
+    },
+    {
+        "id": "8941f0b4.c07ff",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Envoyer température",
+        "topic": "Heater_Home",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e12ef56e.5c2b88",
+        "x": 1680,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2f8f8c03.1e4ff4",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "b94379711a0b6c96",
+        "name": "Toutes les minutes",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1020,
+        "y": 340,
+        "wires": [
+            [
+                "a5b6c59b.22f6f"
+            ]
+        ]
+    },
+    {
+        "id": "a5b6c59b.22f6f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "b94379711a0b6c96",
+        "name": "Générer la production solaire",
+        "func": "var now = new Date();\nvar hour = now.getHours();\n\nvar production = 0;\n\nif (hour >= 6 && hour <= 18) {\n    production = Math.sin((Math.PI / 12) * (hour - 6)) * 1000;\n}\n\nproduction += (Math.random() - 0.5) * 50;\nproduction = Math.max(0, Math.round(production * 100) / 100);\n\nmsg.payload = {\n    time: now.toISOString(),\n    production: production\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 340,
+        "wires": [
+            [
+                "b4d5a5c8.efabf8"
+            ]
+        ]
+    },
+    {
+        "id": "b4d5a5c8.efabf8",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "b94379711a0b6c96",
+        "name": "Envoyer la production",
+        "topic": "Solar_Panel_Roof",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e12ef56e.5c2b88",
+        "x": 1530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "aa9c250cb850b677",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "g": "939b22258f9a48da",
+        "name": "Delay",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 180,
+        "wires": [
+            [
+                "5f3b9cf3.3784f4"
+            ]
+        ]
+    },
+    {
+        "id": "f3e34f82.d1c8a",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "g": "6cce44b590c4ee77",
+        "name": "Envoi toutes les 10s",
+        "props": [],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            [
+                "f4d5efb7.123c6"
+            ]
+        ]
+    },
+    {
+        "id": "f4d5efb7.123c6",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "6cce44b590c4ee77",
+        "name": "Simuler image caméra",
+        "func": "msg.payload = {\n    \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...\",\n    \"timestamp\": new Date().toISOString()\n};\nmsg.topic = \"Camera_jardin\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "7a8a9f4a.a5c9a"
+            ]
+        ]
+    },
+    {
+        "id": "7a8a9f4a.a5c9a",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "6cce44b590c4ee77",
+        "name": "Envoyer image",
+        "topic": "Camera_jardin",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e12ef56e.5c2b88",
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e12ef56e.5c2b88",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

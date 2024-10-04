@@ -1,16 +1,35 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
+@using Radzen.Blazor
+
+<RadzenNotification />
+<!-- Header -->
+<div class="bg-dark text-white p-2 d-flex">
+    <RadzenButton Icon="menu" Click="ToggleNavMenu" Class="navbar-toggler" />
+    <RadzenLabel Text="Domobert" Class="navbar-brand" Style="margin-left: 10px;" />
+</div>
+
+<!-- Body with Sidebar and Main Content -->
+<div class="d-flex" style="min-height: 100vh;">
+    <!-- Sidebar (menu latéral) -->
+    <div class="sidebar bg-light" style="width: 250px; display:@(collapseNavMenu ? "none" : "block")">
         <NavMenu />
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+    <!-- Contenu principal qui occupe tout l'espace -->
+    <div class="main-content flex-grow-1 p-4" style="width:@(collapseNavMenu ? "100%" : "calc(100% - 250px)")">
+        <article class="content">
             @Body
         </article>
-    </main>
+    </div>
 </div>
+<RadzenFooter class="sidebar bg-light">
+    &copy; 2024 - Domobert
+</RadzenFooter>
+@code {
+    private bool collapseNavMenu = false;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

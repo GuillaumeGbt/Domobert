@@ -1,7 +1,44 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Home - Domotique</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="homepage-container">
+    <!-- En-tête avec le titre de l'application et l'image -->
+    <div class="header">
+        <h1>Bienvenue dans votre espace domotique</h1>
+        <img src="images/smart-home.png" alt="Smart Home" class="header-image" />
+    </div>
 
-Welcome to your new app.
+    <!-- Cartes pour les principales sections de l'application -->
+    <div class="cards-container">
+        <RadzenCard Class="card" Click="NavigateToDevices">
+            <div class="card-icon">
+                <RadzenIcon Icon="devices" Style="font-size: 50px;" />
+            </div>
+            <h3>Gérer les Appareils</h3>
+            <p>Contrôlez et surveillez tous vos appareils connectés.</p>
+        </RadzenCard>
+
+        <RadzenCard Class="card" Click="NavigateToSensors">
+            <div class="card-icon">
+                <RadzenIcon Icon="sensors" Style="font-size: 50px;" />
+            </div>
+            <h3>Surveiller les Capteurs</h3>
+            <p>Obtenez des données en temps réel sur vos capteurs.</p>
+        </RadzenCard>
+
+        <RadzenCard Class="card" Click="NavigateToNotifications">
+            <div class="card-icon">
+                <RadzenIcon Icon="notifications" Style="font-size: 50px;" />
+            </div>
+            <h3>Notifications</h3>
+            <p>Vérifiez et gérez toutes vos alertes et notifications.</p>
+        </RadzenCard>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 - Domobert</p>
+    </footer>
+</div>

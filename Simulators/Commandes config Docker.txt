@@ -1,0 +1,13 @@
+Config pour docker de sql Server, NoderRed et Mosquitto :
+
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Test1234" -p 1433:1433 --name sql_server_container -d mcr.microsoft.com/mssql/server
+
+
+docker network create my-network
+
+
+docker run -d --name mosquitto --network my-network -p 1883:1883 -v *****EmplacementFichierConfig*****/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+
+
+docker run -d --name nodered --network my-network -p 1880:1880 nodered/node-red 

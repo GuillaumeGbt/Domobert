@@ -1,0 +1,22 @@
+﻿@page "/dashboard"
+@using Blazor_Domobert.Pages.Widget
+
+<PageTitle>Dashboard</PageTitle>
+
+<h3>Dynamic Dashboard</h3>
+
+@if (devices is null)
+{
+    <RadzenProgressBar Mode = "ProgressBarMode.Indeterminate" Style = "width: 100%;" />
+}
+else
+{
+<div class="dashboard-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+        @foreach (var device in devices)
+        {
+            <Light Device="device" />
+        }
+    </div>
+}
+
+

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,8 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Widget\Heater.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+    <PackageReference Include="Radzen.Blazor" Version="5.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Widget\Heater.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Widget\Heater.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Widget\Heater.razor" />
+    <None Include="wwwroot\Images\smart-home.png" />
   </ItemGroup>
 
 </Project>
