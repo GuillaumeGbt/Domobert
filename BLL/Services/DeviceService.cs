@@ -28,7 +28,14 @@ namespace BLL.Services
 
         public int Add(Bll.Device device)
         {
-            return _repository.Add(device.toDal());
+            Dal.Device newDevice = device.toDal();
+
+            if (_repository.GetAll().Any(dal => newDevice.TopicMQTT == dal.TopicMQTT))
+                throw new ArgumentException(
+                    $"Combination of name and location should be unique." +
+                    $"\n {newDevice.Name} already exist in {newDevice.Location}");
+
+            return _repository.Add(newDevice);
         }
 
         public bool Update(int id, Bll.Device device)

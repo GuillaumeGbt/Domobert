@@ -102,6 +102,7 @@ namespace DAL.Services
             }
         }
 
+
         // Souscription à un topic avec un callback pour traiter le message
         public void SubscribeAsync(string topic, Action<string> callBack)
         {

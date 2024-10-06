@@ -222,3 +222,4 @@ C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\refint\AP
 C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\API_Domobert.pdb
 C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\API_Domobert.genruntimeconfig.cache
 C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\ref\API_Domobert.dll
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\MQTTnet.dll

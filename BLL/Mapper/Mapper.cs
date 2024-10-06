@@ -1,5 +1,6 @@
 ﻿using Dal = DAL.Models;
 using Bll = BLL.Models;
+using Common;
 
 
 namespace BLL.Mapper
@@ -13,8 +14,10 @@ namespace BLL.Mapper
                 Id = entity.Id,
                 Name = entity.Name,
                 Location = entity.Location,
-                Type = entity.Type,
-                TopicMQTT = entity.Name + "_" + entity.Location
+                Type = entity.Type.ToStringType(),
+                TopicMQTT = entity.Location + "/" + 
+                            entity.Name.Replace(" ", "_") + "/" +
+                            entity.Type.ToStringType()
             };
         }
 
@@ -25,7 +28,8 @@ namespace BLL.Mapper
                 Id = entity.Id,
                 Name = entity.Name,
                 Location = entity.Location,
-                Type = entity.Type,
+                Type = entity.Type.ToEDeviceType(),
+                TopicMQTT = entity.TopicMQTT
             };
         }
     }

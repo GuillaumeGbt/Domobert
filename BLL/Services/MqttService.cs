@@ -1,8 +1,4 @@
-﻿using Common;
-using Dal = DAL.Services;
-using MQTTnet;
-using MQTTnet.Client;
-using System.Text;
+﻿using Dal = DAL.Services;
 
 namespace BLL.Services
 {
@@ -15,14 +11,15 @@ namespace BLL.Services
             _mqttService = mqttService;
         }
 
-        public async Task PublishMessage(string topic, string message)
+        public async Task SubscribeAsync(string topic, Action<string> callback)
         {
-            await _mqttService.PublishAsync(topic, message);
+            _mqttService.SubscribeAsync(topic, callback);
+            await _mqttService.SubscribeToTopicsAsync(new[] { topic });
         }
 
-        public async Task SubscribeToTopic(string topic)
+        public async Task<bool> PublishAsync(string topic, string message)
         {
-            throw new NotImplementedException();
+            return await _mqttService.PublishAsync(topic, message);
         }
     }
 }

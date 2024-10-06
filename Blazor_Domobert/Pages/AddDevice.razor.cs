@@ -44,7 +44,8 @@ namespace Blazor_Domobert.Pages
                 }
                 else
                 {
-                    ShowToast("Error", "Failed to add device.", NotificationSeverity.Error);
+                    var errorMessage = await response.Content.ReadAsStringAsync(); // Lire le contenu en tant que chaîne
+                    ShowToast("Error", "Failed to add device.\n" + errorMessage, NotificationSeverity.Error);
                 }
             }
             catch (Exception ex)
@@ -60,7 +61,7 @@ namespace Blazor_Domobert.Pages
                 Severity = severity,
                 Summary = summary,
                 Detail = detail,
-                Duration = 4000
+                Duration = 8000
             });
         }
     }

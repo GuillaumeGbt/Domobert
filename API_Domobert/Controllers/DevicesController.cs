@@ -24,7 +24,7 @@ namespace API_Domobert.Controllers
         {
             try
             {
-                return Ok(_repository.GetAll());
+                return Ok(_repository.GetAll().Select(device => device.ToInfoDevice()));
             }
             catch (Exception e)
             {
@@ -39,7 +39,7 @@ namespace API_Domobert.Controllers
         {
             try
             {
-                return Ok(_repository.GetById(id));
+                return Ok(_repository.GetById(id).ToInfoDevice());
             }
             catch (Exception e)
             {
@@ -54,7 +54,7 @@ namespace API_Domobert.Controllers
         {
             try
             {
-                return Ok(_repository.Add(value.toBll()));
+                return Ok(_repository.Add(value.ToBll()));
             }
             catch (Exception e)
             {
@@ -69,7 +69,7 @@ namespace API_Domobert.Controllers
         {
             try
             {
-                return Ok(_repository.Update(id, value.toBll()));
+                return Ok(_repository.Update(id, value.ToBll()));
             }
             catch (Exception e)
             {
