@@ -5,6 +5,7 @@ using sDal = DAL.Services;
 using sBll = BLL.Services;
 using Microsoft.Extensions.DependencyInjection;
 using BLL.BackgroundServices;
+using DAL.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IDeviceRepository<Bll.Device>, BLL.Services.DeviceService>();
-builder.Services.AddScoped<IDeviceRepository<Dal.Device>, DAL.Services.DeviceService>();
+builder.Services.AddSingleton<IDeviceRepository<Dal.Device>, DAL.Services.DeviceService>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -22,11 +23,6 @@ builder.Services.AddSwaggerGen();
 
 
 // MQTT service
-//builder.Services.AddSingleton(
-//    builder.Configuration.GetSection("Mqtt").Get<sDal.MqttService.Configuration>()
-//    ?? throw new Exception("Mqtt Config is missing")
-//);
-//builder.Services.AddTransient<sBll.MqttService>();
 
 var mqttConfig = builder.Configuration.GetSection("Mqtt").Get<DAL.Services.MqttService.Configuration>()
                   ?? throw new Exception("Mqtt Config is missing");
@@ -36,6 +32,8 @@ builder.Services.AddSingleton<DAL.Services.MqttService>(sp =>
     var deviceRepository = sp.GetRequiredService<IDeviceRepository<Dal.Device>>();
     return new DAL.Services.MqttService(mqttConfig, deviceRepository);
 });
+
+
 builder.Services.AddHostedService<MqttBackgroundService>();
 
 builder.Services.AddTransient<BLL.Services.MqttService>();

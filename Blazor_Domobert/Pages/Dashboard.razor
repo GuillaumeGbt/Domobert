@@ -1,5 +1,6 @@
 ﻿@page "/dashboard"
 @using Blazor_Domobert.Pages.Widget
+@using Blazor_Domobert.Models
 
 <PageTitle>Dashboard</PageTitle>
 
@@ -11,10 +12,31 @@
 }
 else
 {
-<div class="dashboard-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
-        @foreach (var device in devices)
+    <div class="DashboardGrid">
+        
+    @foreach (var device in devices)
         {
-            <Light Device="device" />
+            @switch (device.TypeCode)   
+            {
+                case eDeviceType.LIGHT:
+                    <Light Device="device" />
+                    break;
+                case eDeviceType.HEATER:
+                    <Heater Device="device" />
+                    break;
+                case eDeviceType.TEMP_HUMI:
+                    <TemperatureSensor Device="device"/>
+                    break;
+                case eDeviceType.SOLAR:
+                    <Solar Device="device" />
+                    break;
+                case eDeviceType.CAMERA:
+                    <Camera Device="device" />
+                    break;
+                default:
+                    break;
+                    
+            }
         }
     </div>
 }

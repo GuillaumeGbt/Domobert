@@ -13,7 +13,14 @@
 
     <div class="mb-3">
         <RadzenLabel Text="Type" Component="Type" />
-        <RadzenTextBox @bind-Value="FormAddDevice.Type" Style="width: 100%;" Placeholder="Enter device type" />
+        <RadzenDropDown @bind-Value=@FormAddDevice.Type 
+                        Style="width: 100%;" 
+                        Data=@Types 
+                        TextProperty="@nameof(Type.Name)" 
+                        ValueProperty="Value" 
+                        AllowClear=true 
+                        Placeholder="Sélectionnez un type " 
+                        Name="DropDownClear" />
     </div>
 
     <div class="mb-3">

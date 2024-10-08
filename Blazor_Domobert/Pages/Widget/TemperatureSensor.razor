@@ -1,5 +1,25 @@
-﻿<h3>TemperatureSensor</h3>
+﻿@inject NotificationService NotificationService
 
-@code {
+<RadzenCard class="DashboardWidget w2 h2">
+    <h4>@Device.Name</h4>
+    <RadzenLabel Text="Type:" />
+    <RadzenText Text="@Device.Type" />
+    <br />
+    <RadzenChart>
+        <RadzenLineSeries Smooth="true" 
+                            Data="@revenue2023" 
+                            CategoryProperty="Date" 
+                            Title="2023"
+                            LineType="LineType.Dashed" 
+                            ValueProperty="Revenue">
 
-}
+            <RadzenMarkers Visible="true" MarkerType="MarkerType.Square" />
+            <RadzenSeriesDataLabels Visible="true" />
+        </RadzenLineSeries>
+        <RadzenCategoryAxis Padding="20" />
+        <RadzenValueAxis Formatter="@FormatAsUSD">
+            <RadzenGridLines Visible="true" />
+            <RadzenAxisTitle Text="Revenue in USD" />
+        </RadzenValueAxis>
+    </RadzenChart>
+</RadzenCard>

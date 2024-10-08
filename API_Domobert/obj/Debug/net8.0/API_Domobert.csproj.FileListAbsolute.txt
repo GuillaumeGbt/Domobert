@@ -223,3 +223,5 @@ C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\API_Domob
 C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\API_Domobert.genruntimeconfig.cache
 C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\ref\API_Domobert.dll
 C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\MQTTnet.dll
+C:\Users\g.guillaume\Desktop\Domobert\API_Domobert\bin\Debug\net8.0\MQTTnet.dll
+C:\Users\g.guillaume\Desktop\Domobert\API_Domobert\obj\Debug\net8.0\API_Domobert.MvcApplicationPartsAssemblyInfo.cs

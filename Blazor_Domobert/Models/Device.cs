@@ -7,7 +7,7 @@ namespace Blazor_Domobert.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
-        public int TypeCode { get; set; }
+        public eDeviceType TypeCode { get; set; }
         public string Location { get; set; }
         public string TopicMQTT { get; set; }
     }

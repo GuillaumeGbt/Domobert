@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_Domobert")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30493558a74088f87a43b6d544205ce4df012c05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e39586555bb570353893597ac9f99b9b7554f9a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_Domobert")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_Domobert")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

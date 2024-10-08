@@ -3,10 +3,14 @@ using DAL.Services;
 using Common;
 using Microsoft.Extensions.Hosting;
 using System.Text.Json;
+using BLL.Models.MQTT;
 
 namespace BLL.BackgroundServices
 {
-    public class MqttBackgroundService(IDeviceRepository<Device> deviceRepository, MqttService mqttService) : BackgroundService
+    public class MqttBackgroundService(
+        IDeviceRepository<Device> deviceRepository, 
+        MqttService mqttService) 
+        : BackgroundService
     {
         public class TypeAndTopic
         {
@@ -70,11 +74,11 @@ namespace BLL.BackgroundServices
         }
 
         // Méthode pour traiter les messages
-        private string ProcessMessage(string message)
+        private T ProcessMessage<T>(string message)
         {
             try
             {
-                var sensorMessage = JsonSerializer.Deserialize<string>(message);
+                var sensorMessage = JsonSerializer.Deserialize<T>(message);
                 if (sensorMessage == null)
                 {
                     throw new Exception("Message non valide reçu.");
@@ -92,38 +96,36 @@ namespace BLL.BackgroundServices
         // Méthodes spécifiques pour traiter les types de capteurs
         private void HandleTempHumi(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"TempHumi: {sensorMessage}");
+            TempHumi sensorMessage = ProcessMessage<TempHumi>(message);
+            Console.WriteLine($"TempHumi: {sensorMessage.temperature}°C, {sensorMessage.humidity}%");
         }
 
         private void HandleLight(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"Light: {sensorMessage}");
+            Console.WriteLine($"Light: {message}");
         }
 
         private void HandleSolar(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"Solar: {sensorMessage}");
+            var sensorMessage = ProcessMessage<Solar>(message);
+            Console.WriteLine($"Solar: {sensorMessage.time}, {sensorMessage.production}kW");
         }
 
         private void HandleCamera(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"Camera: {sensorMessage}");
+            //var sensorMessage = ProcessMessage(message);
+            //Console.WriteLine($"Camera: {sensorMessage}");
         }
 
         private void HandleAlarm(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"Alarm: {sensorMessage}");
+        //    var sensorMessage = ProcessMessage(message);
+        //    Console.WriteLine($"Alarm: {sensorMessage}");
         }
 
         private void HandleHeater(string message)
         {
-            var sensorMessage = ProcessMessage(message);
-            Console.WriteLine($"Heater: {sensorMessage}");
+            Console.WriteLine($"Heater: {message}");
         }
     }
 }

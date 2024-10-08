@@ -1,5 +1,17 @@
-﻿<h3>Heater</h3>
+﻿@inject NotificationService NotificationService
 
-@code {
-
-}
+<RadzenCard class="DashboardWidget w1 h1">
+    <h4>@Device.Name</h4>
+    <RadzenLabel Text="Type:" />
+    <RadzenText Text="@Device.Type" />
+    <br />
+    <RadzenLabel Text="Location:" />
+    <RadzenText Text="@Device.Location" />
+    <RadzenButton Style="background-color:#8341ff; border: thin;"
+                  Text="On"
+                  Click=@(args => ShowNotification(new NotificationMessage {
+                  Severity = NotificationSeverity.Warning,
+                  Summary = "Warning Summary",
+                  Detail = Device.Name,
+                  Duration = 4000 })) />
+</RadzenCard>

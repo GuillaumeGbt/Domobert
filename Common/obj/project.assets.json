@@ -8,25 +8,28 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Guillaume\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\g.guillaume\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Guillaume\\Source\\Repos\\Domobert\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\Guillaume\\Source\\Repos\\Domobert\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\Guillaume\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Guillaume\\Source\\Repos\\Domobert\\Common\\obj\\",
+      "projectPath": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\g.guillaume\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Guillaume\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\g.guillaume\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -46,11 +49,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -72,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

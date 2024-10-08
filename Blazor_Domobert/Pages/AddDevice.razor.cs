@@ -1,14 +1,35 @@
 ﻿using Blazor_Domobert.Models;
+using Blazor_Domobert.Pages.Widget;
 using Microsoft.AspNetCore.Components;
 using Radzen;
 using System.Net.Http.Json;
+using System.Runtime.CompilerServices;
+using System.Security.Claims;
 using System.Text.Json;
+using System.Xml.Linq;
 
 namespace Blazor_Domobert.Pages
 {
     public partial class AddDevice
     {
         public DeviceAdd FormAddDevice { get; set; }
+
+        internal class Type
+        {
+            public string Name { get; set; }
+            public string Value { get; set; }
+        }
+
+        string? value;
+        List<Type> Types = new List<Type> 
+        {
+            new Type{Value= "Light",Name="Lampe" },
+            new Type{Value= "Heater",Name="Chauffage" },
+            new Type{Value= "Camera",Name="Caméra" },
+            new Type{Value= "Alarm",Name="Alarme" },
+            new Type{Value= "Temphumi",Name="Température et humidité" },
+            new Type{Value= "Solar",Name="Panneau solaire" }
+        };
 
         [Inject]
         public HttpClient Client { get; set; }

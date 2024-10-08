@@ -1,47 +1,51 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\obj\\Debug\\net8.0\\compressed\\y6yfsjjyoh.gz",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\obj\\Debug\\net8.0\\compressed\\bb3ltqt58f.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Blazor_Domobert.styles.css",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Blazor_Domobert.styles.css",
       "PackagePath": "staticwebassets\\Blazor_Domobert.styles.css"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\Images\\smart-home.png",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\Images\\smart-home.png",
       "PackagePath": "staticwebassets\\Images\\smart-home.png"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\css\\Widget.css",
+      "PackagePath": "staticwebassets\\css\\Widget.css"
+    },
+    {
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\index.html",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Guillaume\\source\\repos\\Domobert\\Blazor_Domobert\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\g.guillaume\\Desktop\\Domobert\\Blazor_Domobert\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
