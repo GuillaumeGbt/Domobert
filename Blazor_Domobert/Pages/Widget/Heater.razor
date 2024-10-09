@@ -1,17 +1,15 @@
 ﻿@inject NotificationService NotificationService
 
-<RadzenCard class="DashboardWidget w1 h1">
-    <h4>@Device.Name</h4>
-    <RadzenLabel Text="Type:" />
-    <RadzenText Text="@Device.Type" />
-    <br />
-    <RadzenLabel Text="Location:" />
-    <RadzenText Text="@Device.Location" />
-    <RadzenButton Style="background-color:#8341ff; border: thin;"
-                  Text="On"
-                  Click=@(args => ShowNotification(new NotificationMessage {
-                  Severity = NotificationSeverity.Warning,
-                  Summary = "Warning Summary",
-                  Detail = Device.Name,
-                  Duration = 4000 })) />
+<RadzenCard class="widget-heater" Visible="Device.IsVisible">
+    <h4>@Device.Name @Device.Location</h4>
+
+    <RadzenCard Class="current-status" Style="margin-bottom: 20px;">
+        <h5>Température à atteindre :</h5>
+        <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+            <p style="font-size: 24px; margin-right: 10px;">@targetTemperature°C</p>
+        </div>
+    </RadzenCard>
+
+    <RadzenSlider @bind-Value="targetTemperature" Min="15" Max="35" Step="0.5" Style="width: 100%;" />
+    <RadzenButton Icon="Thermometer" Text="Définir la température" Click="SetTemperature" Style="margin-top: 10px;" />
 </RadzenCard>

@@ -1,17 +1,23 @@
 ﻿@inject NotificationService NotificationService
 
-<RadzenCard class="DashboardWidget w2 h2">
+@inject NotificationService NotificationService
+
+<RadzenCard class="widget-solar" Visible="Device.IsVisible">
     <h4>@Device.Name</h4>
-    <RadzenLabel Text="Type:" />
-    <RadzenText Text="@Device.Type" />
-    <br />
-    <RadzenLabel Text="Location:" />
-    <RadzenText Text="@Device.Location" />
-    <RadzenButton Style="background-color:#8341ff; border: thin;"
-                  Text="On"
-                  Click=@(args => ShowNotification(new NotificationMessage { 
-                      Severity = NotificationSeverity.Warning, 
-                      Summary = "Warning Summary", 
-                      Detail = Device.Name, 
-                      Duration = 4000 })) />
+    <RadzenCard>
+        <h3>Valeurs actuelles</h3>
+        @if (currentData != null)
+        {
+            <p>Production actuelle : @currentData.production kW/h</p>
+        }
+        else
+        {
+            <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+            <p>Loading</p>
+        }
+    </RadzenCard>
+
+    <RadzenChart Style="height: 400px;">
+        <RadzenLineSeries Data="historyData" CategoryProperty="Timestamp" ValueProperty="production" Title="Kw/h" />
+    </RadzenChart>
 </RadzenCard>

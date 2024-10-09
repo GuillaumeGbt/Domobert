@@ -1,11 +1,20 @@
 ﻿@inherits LayoutComponentBase
+@inject ThemeService ThemeService
 @using Radzen.Blazor
+
 
 <RadzenNotification />
 <!-- Header -->
-<div class="bg-dark text-white p-2 d-flex">
-    <RadzenButton Icon="menu" Click="ToggleNavMenu" Class="navbar-toggler" />
-    <RadzenLabel Text="Domobert" Class="navbar-brand" Style="margin-left: 10px;" />
+<div class="bg-dark text-white p-2 d-flex justify-content-between align-items-center w-100">
+    <div class="d-flex">
+        <RadzenButton Icon="menu" Click="ToggleNavMenu" Class="navbar-toggler" />
+        <RadzenLabel Text="Domobert" Class="navbar-brand" Style="margin-left: 10px;" />
+    </div>
+    <div style="margin-right: 20px">
+        <RadzenAppearanceToggle 
+            DarkTheme=""
+            LightTheme="" />
+    </div>
 </div>
 
 <!-- Body with Sidebar and Main Content -->
@@ -22,11 +31,32 @@
         </article>
     </div>
 </div>
-<RadzenFooter class="sidebar bg-light">
+@* <RadzenFooter class="bg-dark text-white">
     &copy; 2024 - Domobert
-</RadzenFooter>
+</RadzenFooter> *@
 @code {
     private bool collapseNavMenu = false;
+    private bool isDarkMode;
+
+
+    protected override Task OnInitializedAsync()
+    {
+        // Si tu souhaites initialiser avec le thème actuel (sombre ou clair)
+        isDarkMode = ThemeService.Theme == "Dark";
+        return base.OnInitializedAsync();
+    }
+
+    private void OnAppearanceChange()
+    {
+        if (isDarkMode)
+        {
+            ThemeService.SetTheme("Dark"); // Passer en mode sombre
+        }
+        else
+        {
+            ThemeService.SetTheme("Light"); // Passer en mode clair
+        }
+    }
 
     private void ToggleNavMenu()
     {

@@ -12,14 +12,12 @@ namespace DAL.Services
         {
             public string Host { get; set; } = string.Empty;
             public int Port { get; set; }
-            public List<string> Topics { get; set; } = new List<string>();
         }
 
         private readonly IMqttClient _client;
 
-        public MqttService(Configuration configuration, IDeviceRepository<Device> deviceRepository)
+        public MqttService(Configuration configuration)
         {
-            configuration.Topics = deviceRepository.GetAll().Select(e => e.TopicMQTT).ToList();
             // Initialisation de la connexion au broker MQTT (Mosquitto)
             MqttFactory factory = new MqttFactory();
 
@@ -33,9 +31,6 @@ namespace DAL.Services
 
             // Tentative de connexion au broker
             ConnectAsync(options).Wait();
-
-            // Abonnement aux topics
-            SubscribeToTopicsAsync(configuration.Topics.ToArray()).Wait();
 
             // Gestion de la reconnexion
             _client.DisconnectedAsync += async (args) =>

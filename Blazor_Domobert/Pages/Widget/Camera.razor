@@ -1,6 +1,6 @@
 ﻿@inject NotificationService NotificationService
 
-<RadzenCard class="DashboardWidget w2 h2">
+<RadzenCard class="widget-camera" Visible="Device.IsVisible">
     <h4>@Device.Name</h4>
     <RadzenLabel Text="Type:" />
     <RadzenText Text="@Device.Type" />

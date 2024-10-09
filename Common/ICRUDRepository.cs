@@ -6,8 +6,8 @@ namespace Common
     {
         public IEnumerable<TEntity> GetAll();
         public TEntity GetById(TId id);
-        public int Add(TEntity device);
-        public bool Update(TId id, TEntity device);
+        public int Add(TEntity entity);
+        public bool Update(TId id, TEntity entity);
         public bool Delete(int id);
     }
 }

@@ -10,10 +10,12 @@ namespace BLL.Services
     {
 
         private IDeviceRepository<Dal.Device> _repository;
+        private MqttConfigService _mqttConfig;
 
-        public DeviceService(IDeviceRepository<Dal.Device> repository)
+        public DeviceService(IDeviceRepository<Dal.Device> repository, MqttConfigService mqttConfigService)
         {
             _repository = repository; 
+            _mqttConfig = mqttConfigService;
         }
 
         public IEnumerable<Bll.Device> GetAll()
@@ -34,7 +36,7 @@ namespace BLL.Services
                 throw new ArgumentException(
                     $"Combination of name and location should be unique." +
                     $"\n {newDevice.Name} already exist in {newDevice.Location}");
-
+            _mqttConfig.AddTopic(newDevice.toTypeAndTopic());
             return _repository.Add(newDevice);
         }
 
@@ -45,6 +47,7 @@ namespace BLL.Services
 
         public bool Delete(int id)
         {
+            _mqttConfig.AddTopic(_repository.GetById(id).toTypeAndTopic());
             return _repository.Delete(id);
         }
     }

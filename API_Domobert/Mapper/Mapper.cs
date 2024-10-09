@@ -2,6 +2,7 @@
 using Bll = BLL.Models;
 using Common;
 using API_Domobert.Models;
+using BLL.Models.History;
 
 namespace API_Domobert.Mapper
 {
@@ -29,6 +30,19 @@ namespace API_Domobert.Mapper
                 TypeCode = (int)entity.Type,
                 TopicMQTT = entity.TopicMQTT
             };
+        }
+
+        public static DataTempHumi toDataTempHumi(this TempHumiData entity)
+        {
+            DataTempHumi newEntity = new DataTempHumi();
+
+            foreach (var prop in entity.GetType().GetProperties())
+            {
+                var value = prop.GetValue(entity);
+                newEntity.GetType().GetProperty(prop.Name)?.SetValue(newEntity, value, null);
+            }
+
+            return newEntity;
         }
     }
 }

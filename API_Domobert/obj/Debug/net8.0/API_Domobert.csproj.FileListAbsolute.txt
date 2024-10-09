@@ -225,3 +225,9 @@ C:\Users\Guillaume\Source\Repos\Domobert\API_Domobert\obj\Debug\net8.0\ref\API_D
 C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\MQTTnet.dll
 C:\Users\g.guillaume\Desktop\Domobert\API_Domobert\bin\Debug\net8.0\MQTTnet.dll
 C:\Users\g.guillaume\Desktop\Domobert\API_Domobert\obj\Debug\net8.0\API_Domobert.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\YamlDotNet.dll
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\libman.json
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\Guillaume\source\repos\Domobert\API_Domobert\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

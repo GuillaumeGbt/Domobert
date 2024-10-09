@@ -2,6 +2,7 @@
 using Blazor_Domobert.Services;
 using Microsoft.AspNetCore.Components;
 using Radzen;
+using Radzen.Blazor;
 
 namespace Blazor_Domobert.Pages
 {
@@ -12,9 +13,15 @@ namespace Blazor_Domobert.Pages
         [Inject]
         public NotificationService NotificationService { get; set; }
 
+        private RadzenContextMenu contextMenu;
+
         private List<Device> devices;
         private const int MaxRetryAttempts = 5;
         private const int RetryDelayMilliseconds = 10000;
+
+        private RadzenSidebar sidebar;
+
+        private IEnumerable<int> selectedDeviceIds = new List<int>();
 
         protected override async Task OnInitializedAsync()
         {
@@ -30,6 +37,7 @@ namespace Blazor_Domobert.Pages
                     if (devices != null && devices.Any())
                     {
                         success = true;
+                        selectedDeviceIds = devices.Select(x => x.Id).ToList();
                     }
                     else
                     {
@@ -66,6 +74,22 @@ namespace Blazor_Domobert.Pages
                     Duration = 15000
                 });
             }
+        }
+
+
+        private void ToggleDeviceVisibility(object value)
+        {
+            // On passe les IDs sélectionnés et met à jour la visibilité des appareils
+            foreach (var device in devices)
+            {
+                // Si l'ID du device est présent dans selectedDeviceIds, on le rend visible, sinon caché
+                device.IsVisible = selectedDeviceIds.Contains(device.Id);
+            }
+        }
+
+        private void ToggleSidebar()
+        {
+            sidebar.Toggle();
         }
     }
 }

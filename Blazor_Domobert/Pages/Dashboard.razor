@@ -4,6 +4,25 @@
 
 <PageTitle>Dashboard</PageTitle>
 
+
+<RadzenSidebar @ref="sidebar" Position="SidebarPosition.Left" Width="300px" Style="background-color: #f4f4f4; color: black">
+    <ChildContent>
+    <RadzenButton Icon="close" Text="Close" Click="ToggleSidebar" ButtonStyle="ButtonStyle.Dark" />
+        <div class="rz-p-12">
+            <h4>Widgets</h4>
+            <RadzenCheckBoxList Data="@devices"
+                                @bind-Value="@selectedDeviceIds"
+                                TValue="int"
+                                TextProperty="Name"
+                                ValueProperty="Id"
+                                Change="ToggleDeviceVisibility" />
+        </div>
+    </ChildContent>
+</RadzenSidebar>
+
+<RadzenButton Icon="Menu" Text="Menu" Click="ToggleSidebar" />
+
+
 <h3>Dynamic Dashboard</h3>
 
 @if (devices is null)
@@ -13,10 +32,9 @@
 else
 {
     <div class="DashboardGrid">
-        
     @foreach (var device in devices)
         {
-            @switch (device.TypeCode)   
+            @switch (device.TypeCode)
             {
                 case eDeviceType.LIGHT:
                     <Light Device="device" />
@@ -25,7 +43,7 @@ else
                     <Heater Device="device" />
                     break;
                 case eDeviceType.TEMP_HUMI:
-                    <TemperatureSensor Device="device"/>
+                    <TemperatureSensor Device="device" />
                     break;
                 case eDeviceType.SOLAR:
                     <Solar Device="device" />
@@ -35,7 +53,6 @@ else
                     break;
                 default:
                     break;
-                    
             }
         }
     </div>

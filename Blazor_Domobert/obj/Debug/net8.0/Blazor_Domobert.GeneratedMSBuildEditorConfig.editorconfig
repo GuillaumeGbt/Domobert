@@ -13,59 +13,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Blazor_Domobert
 build_property.RootNamespace = Blazor_Domobert
-build_property.ProjectDir = C:\Users\g.guillaume\Desktop\Domobert\Blazor_Domobert\
+build_property.ProjectDir = C:\Users\Guillaume\source\repos\Domobert\Blazor_Domobert\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\g.guillaume\Desktop\Domobert\Blazor_Domobert
+build_property.MSBuildProjectDirectory = C:\Users\Guillaume\source\repos\Domobert\Blazor_Domobert
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/App.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Dashboard.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Widget/Camera.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Widget/Camera.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lkZ2V0XENhbWVyYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Widget/Heater.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Widget/Heater.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lkZ2V0XEhlYXRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Widget/Light.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Widget/Light.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lkZ2V0XExpZ2h0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Widget/Solar.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Widget/Solar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lkZ2V0XFNvbGFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Widget/TemperatureSensor.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Widget/TemperatureSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2lkZ2V0XFRlbXBlcmF0dXJlU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/_Imports.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Layout/MainLayout.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ba9zz5iy85
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Layout/NavMenu.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-pztcnkxwn2
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/AddDevice.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/AddDevice.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRGV2aWNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-whupxrq8h5
 
-[C:/Users/g.guillaume/Desktop/Domobert/Blazor_Domobert/Pages/Home.razor]
+[C:/Users/Guillaume/source/repos/Domobert/Blazor_Domobert/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-l7cloitoyt

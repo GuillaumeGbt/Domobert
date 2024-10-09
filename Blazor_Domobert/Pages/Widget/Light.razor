@@ -1,17 +1,34 @@
 ﻿@inject NotificationService NotificationService
 
-<RadzenCard class="DashboardWidget w1 h1">
-    <h4>@Device.Name</h4>
-    <RadzenLabel Text="Type:" />
-    <RadzenText Text="@Device.Type" />
-    <br />
-    <RadzenLabel Text="Location:" />
-    <RadzenText Text="@Device.Location" />
-    <RadzenButton Style="background-color:#8341ff; border: thin;"
-                  Text="On"
-                  Click=@(args => ShowNotification(new NotificationMessage { 
-                      Severity = NotificationSeverity.Warning, 
-                      Summary = "Warning Summary", 
-                      Detail = Device.Name, 
-                      Duration = 4000 })) />
+<RadzenCard class="widget-light" Visible="Device.IsVisible">
+    <h4>@Device.Name @Device.Location</h4>
+
+    <RadzenCard Class="current-status" Style="margin-bottom: 20px;">
+        <h5>Statut actuel :</h5>
+        @if (isLightOn)
+        {
+            <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+                <RadzenIcon Icon="Lightbulb" IconStyle="IconStyle.Light" Style="color: limegreen; font-size: 50px; justify-content: center" />
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <p>On</p>
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+                <RadzenIcon Icon="Light_Off" IconStyle="IconStyle.Light" Style="color: red; font-size: 50px;" />
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <p>Off</p>
+            </div>
+        }
+    </RadzenCard>
+
+    <RadzenButton Icon="@(isLightOn ? "power_off" : "Power")"
+                  Text="@(isLightOn ? "Éteindre" : "Allumer")"
+                  Click="ToggleLamp" />
+
 </RadzenCard>

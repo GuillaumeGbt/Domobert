@@ -1,25 +1,23 @@
 ﻿@inject NotificationService NotificationService
 
-<RadzenCard class="DashboardWidget w2 h2">
+<RadzenCard class="widget-temp-humi" Visible="Device.IsVisible">
     <h4>@Device.Name</h4>
-    <RadzenLabel Text="Type:" />
-    <RadzenText Text="@Device.Type" />
-    <br />
-    <RadzenChart>
-        <RadzenLineSeries Smooth="true" 
-                            Data="@revenue2023" 
-                            CategoryProperty="Date" 
-                            Title="2023"
-                            LineType="LineType.Dashed" 
-                            ValueProperty="Revenue">
+    <RadzenCard>
+        <h3>Valeurs actuelles</h3>
+        @if (currentData != null)
+        {
+            <p>Température actuelle : @currentData.temperature°C</p>
+            <p>Humidité actuelle : @currentData.humidity%</p>
+        }
+        else
+        {
+            <RadzenProgressBar Value = "100" ShowValue = "false" Mode = "ProgressBarMode.Indeterminate" />
+            <p>Loading</p>
+        }
+    </RadzenCard>
 
-            <RadzenMarkers Visible="true" MarkerType="MarkerType.Square" />
-            <RadzenSeriesDataLabels Visible="true" />
-        </RadzenLineSeries>
-        <RadzenCategoryAxis Padding="20" />
-        <RadzenValueAxis Formatter="@FormatAsUSD">
-            <RadzenGridLines Visible="true" />
-            <RadzenAxisTitle Text="Revenue in USD" />
-        </RadzenValueAxis>
-    </RadzenChart>
+    <RadzenChart Style="height: 400px;">
+        <RadzenLineSeries Data="historyData" CategoryProperty="Timestamp" ValueProperty="Temperature" Title="Température" />
+        <RadzenLineSeries Data="historyData" CategoryProperty="Timestamp" ValueProperty="Humidity" Title="Humidité" />
+</RadzenChart>
 </RadzenCard>

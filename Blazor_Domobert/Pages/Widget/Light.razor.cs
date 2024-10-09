@@ -1,7 +1,9 @@
 ﻿using Blazor_Domobert.Models;
+using Blazor_Domobert.Services;
 using Microsoft.AspNetCore.Components;
 using Radzen;
 using System;
+using System.Text.Json;
 
 namespace Blazor_Domobert.Pages.Widget
 {
@@ -10,12 +12,32 @@ namespace Blazor_Domobert.Pages.Widget
         [Parameter]
         public Device Device { get; set; }
 
+        [Inject]
+        public SignalRService _signalRService { get; set; }
 
-        void ShowNotification(NotificationMessage message)
+        private bool isLightOn;
+
+        protected override async Task OnInitializedAsync()
         {
-            NotificationService.Notify(message);
+            await _signalRService.ConnectAsync(Device.TopicMQTT, HandleNotification);
+        }
 
-            Console.WriteLine($"{message.Severity} notification");
+        private void ToggleLamp()
+        {
+            isLightOn = !isLightOn;
+        }
+
+        private void HandleNotification(string message)
+        {
+            isLightOn = JsonSerializer.Deserialize<bool>(message);
+            StateHasChanged(); // Met à jour l'UI
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            _signalRService.OnReceiveNotification -= HandleNotification;
+            await _signalRService.DisconnectAsync();
         }
     }
 }
+

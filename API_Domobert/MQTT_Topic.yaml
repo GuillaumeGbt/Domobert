@@ -1,0 +1,12 @@
+- type: LIGHT
+  topic: Salon/Lampe/Light
+- type: HEATER
+  topic: Chambre/Chauffage/Heater
+- type: CAMERA
+  topic: Jardin/Camera/Camera
+- type: ALARM
+  topic: Hall/Alarme/Alarm
+- type: SOLAR
+  topic: Roof/Solar_Panel/Solar
+- type: TEMP_HUMI
+  topic: Maison/Temperature/TempHumi

@@ -1,7 +1,8 @@
 ﻿using Blazor_Domobert.Models;
+using live = Blazor_Domobert.Models.SignalR;
+using Blazor_Domobert.Services;
 using Microsoft.AspNetCore.Components;
-using Radzen;
-using System.Globalization;
+using System.Text.Json;
 
 namespace Blazor_Domobert.Pages.Widget
 {
@@ -10,86 +11,40 @@ namespace Blazor_Domobert.Pages.Widget
         [Parameter]
         public Device Device { get; set; }
 
+        [Inject]
+        public SignalRService _signalRService { get; set; }
+        [Inject]
+        public TempHumiService _tempHumiService { get; set; }
 
-        void ShowNotification(NotificationMessage message)
+        private List<TempHumiData> historyData = new();
+        private live.TempHumiData currentData;
+
+        protected override async Task OnInitializedAsync()
         {
-            NotificationService.Notify(message);
+            historyData = await _tempHumiService.GetTempHumiAsync(Device.Id);
 
-            Console.WriteLine($"{message.Severity} notification");
+            historyData = historyData
+                .GroupBy(data => data.Timestamp.Date) // Grouper par jour
+                .Select(g => new TempHumiData
+                {
+                    Timestamp = g.Key, // Date du jour
+                    Temperature = g.Average(d => d.Temperature), // Moyenne de température
+                    Humidity = g.Average(d => d.Humidity) // Moyenne d'humidité
+                }).ToList();
+
+            await _signalRService.ConnectAsync(Device.TopicMQTT, HandleNotification);
         }
 
-        class DataItem
+            private void HandleNotification(string message)
         {
-            public string Date { get; set; }
-            public double Revenue { get; set; }
+            currentData = JsonSerializer.Deserialize<Models.SignalR.TempHumiData>(message);
+            StateHasChanged(); // Met à jour l'UI
         }
 
-        string FormatAsUSD(object value)
+        public async ValueTask DisposeAsync()
         {
-            return ((double)value).ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+            _signalRService.OnReceiveNotification -= HandleNotification;
+            await _signalRService.DisconnectAsync();
         }
-
-        DataItem[] revenue2023 = new DataItem[] {
-        new DataItem
-        {
-            Date = "Jan",
-            Revenue = 234000
-        },
-        new DataItem
-        {
-            Date = "Feb",
-            Revenue = 269000
-        },
-        new DataItem
-        {
-            Date = "Mar",
-            Revenue = 233000
-        },
-        new DataItem
-        {
-            Date = "Apr",
-            Revenue = 244000
-        },
-        new DataItem
-        {
-            Date = "May",
-            Revenue = 214000
-        },
-        new DataItem
-        {
-            Date = "Jun",
-            Revenue = 253000
-        },
-        new DataItem
-        {
-            Date = "Jul",
-            Revenue = 274000
-        },
-        new DataItem
-        {
-            Date = "Aug",
-            Revenue = 284000
-        },
-        new DataItem
-        {
-            Date = "Sept",
-            Revenue = 273000
-        },
-        new DataItem
-        {
-            Date = "Oct",
-            Revenue = 282000
-        },
-        new DataItem
-        {
-            Date = "Nov",
-            Revenue = 289000
-        },
-        new DataItem
-        {
-            Date = "Dec",
-            Revenue = 294000
-        }
-    };
     }
 }

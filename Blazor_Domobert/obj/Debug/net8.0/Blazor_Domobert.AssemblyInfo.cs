@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Blazor_Domobert")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e39586555bb570353893597ac9f99b9b7554f9a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e61b1afe62de57c1129c68eec7669986c55fe9ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("Blazor_Domobert")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Blazor_Domobert")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

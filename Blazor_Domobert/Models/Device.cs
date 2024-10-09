@@ -10,5 +10,6 @@ namespace Blazor_Domobert.Models
         public eDeviceType TypeCode { get; set; }
         public string Location { get; set; }
         public string TopicMQTT { get; set; }
+        public bool IsVisible { get; set; } = true;
     }
 }
